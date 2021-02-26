@@ -1,0 +1,28 @@
+Intro & Junit architecture
+    Junit is a java library used for unit testing
+    unit testing is examining a small piece of software
+    the goal is to assert the expected behavior and state
+    Junit is part of Java API library
+    Testing can be done with a debugging tool or print statements (this is limited)
+
+    Junit provides automated testing and validation
+        provide tools to unit test all aspects of the program
+    
+    unit testing is critical
+
+    Why testing ?
+        AUTOMATION, testing the code over a period of time
+        The point is to verify on an ongoing basis that the code continues to work in the future.
+
+    Why a testing framework ?
+        in manual testing we always run, verify and alert messages in test cases,
+        those repeated tasks are handled by the testing framework.
+
+    Junit4 is slighlty old and doesn't support most of new java features
+    Junit5 is a completly new thing
+    
+    Junit5 = Platform: Jupiter + Vintage + Ext
+
+    
+
+

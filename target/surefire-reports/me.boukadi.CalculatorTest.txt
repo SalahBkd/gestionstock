@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: me.boukadi.CalculatorTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.036 s <<< FAILURE! - in me.boukadi.CalculatorTest
+add  Time elapsed: 0.014 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: should add two numbers ==> expected: <9> but was: <4>
+	at me.boukadi.CalculatorTest.add(CalculatorTest.java:14)
+
