@@ -96,4 +96,8 @@ class CalculatorTest {
         );
     }
 
+    // @Tag allows you to run only certain tests: e.g Unit Tests or Integration Tests
+    // TestInfo interface info about the running test
+    // TestReporter interface allows you to write the Junit output
+
 }
