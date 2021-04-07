@@ -10,6 +10,17 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'sonar-azure-bkd'
+    organization: 'boukadisalaheddine'
+    scannerMode: 'Other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner,
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=BOUKADISALAHEDDINE_ci-demo
+      sonar.projectName=ci-demo
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -45,17 +56,7 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'sonar-azure-bkd'
-    organization: 'boukadisalaheddine'
-    scannerMode: 'Other'
-    extraProperties: |
-      # Additional properties that will be passed to the scanner,
-      # Put one key=value per line, example:
-      # sonar.exclusions=**/*.bin
-      sonar.projectKey=BOUKADISALAHEDDINE_ci-demo
-      sonar.projectName=ci-demo
+- task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
