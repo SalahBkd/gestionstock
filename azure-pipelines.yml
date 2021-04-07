@@ -31,7 +31,7 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
 
 - task: Maven@3
   inputs:
@@ -43,7 +43,7 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
 
 - task: Maven@3
   inputs:
@@ -54,9 +54,8 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
 
-- task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
