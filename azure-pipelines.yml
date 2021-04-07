@@ -44,3 +44,12 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'sonar-azure-bkd'
+    organization: 'boukadisalaheddine'
+    scannerMode: 'Other'
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
